@@ -1,5 +1,5 @@
 ---
-title: The one thing about AirPods Pro that nobody on the internet seem to know
+title: The one thing about AirPods Pro that nobody on the internet seem to know! 🤔
 publish_date: 2022-01-15
 ---
 
