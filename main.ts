@@ -2,7 +2,7 @@ import blog, { ga, redirects } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
 blog({
   title: "Code Monuments",
-  description: "This is my new blog.",
+  description: "Make the web the best platform it can be!",
   cover: "./assets/banner.jpg",
   // coverStyle: "avatar-rounded",
   author: "Benjamin Jesuiter",
