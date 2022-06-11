@@ -1,4 +1,9 @@
-# How2 - Crafting Great NPM Libraries
+---
+title: How2 - Crafting Great NPM Libraries
+publish_date: 2022-01-19
+---
+
+# 
 
 About Self
 Series Slug: how2-npm-libs Url: https://blog.codemonument.com/series/how2-npm-libs
