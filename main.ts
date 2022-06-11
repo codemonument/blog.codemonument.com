@@ -3,10 +3,12 @@ import blog, { ga, redirects } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 blog({
   title: "Code Monuments",
   description: "Make the web the best platform it can be!",
-  cover: "./assets/banner.jpg",
+  cover: "./assets/banner-left.jpg",
   // coverStyle: "avatar-rounded",
   author: "Benjamin Jesuiter",
   background: "#f9f9f9",
+  coverTextColor: "#f9f9f9",
+  avatar: "./assets/avatar.jpg",
   // middlewares: [
 
   // If you want to set up Google Analytics, paste your GA key here.
