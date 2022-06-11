@@ -3,6 +3,8 @@ title: Node Basics - The package.json for Library Authors
 publish_date: 2022-02-03
 ---
 
+*Beginner/Entry Level Blogpost*
+
 > **Note!**  
 > This is the first blogpost for my exploration Series (after the introduction): 
 > [How2 - Crafting Great NPM Libraries](https://blog.codemonument.com/series/how2-npm-libs). 

@@ -3,7 +3,7 @@ title: How2 - Crafting Great NPM Libraries 🔨
 publish_date: 2022-01-19
 ---
 
-The Series (Introduction)
+*The Series (Introduction)*
 
 The first bits of code, I wanted to share as a library on npm where super simple RxJS pipelines, which I thought (and still think!) would be useful to other people. 
 
