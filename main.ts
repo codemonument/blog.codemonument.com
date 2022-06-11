@@ -1,4 +1,10 @@
-import blog, { ga, redirects } from "https://deno.land/x/blog@0.3.3/blog.tsx";
+/** @jsx h */
+
+import blog, {
+  ga,
+  h,
+  redirects,
+} from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
 blog({
   title: "Code Monuments",
@@ -9,6 +15,13 @@ blog({
   background: "#f9f9f9",
   coverTextColor: "#f9f9f9",
   avatar: "./assets/avatar.jpg",
+  links: [
+    { title: "Email", url: "mailto:blog@codemonument.com" },
+    { title: "GitHub Codemonument", url: "https://github.com/codemonument" },
+    { title: "GitHub bjesuiter", url: "https://github.com/bjesuiter" },
+    { title: "Twitter", url: "https://twitter.com/codemonument" },
+  ],
+  // header:  <header>Your custom header</header>,
   // middlewares: [
 
   // If you want to set up Google Analytics, paste your GA key here.
