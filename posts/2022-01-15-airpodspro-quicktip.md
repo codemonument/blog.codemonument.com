@@ -1,6 +1,12 @@
 ---
 title: The one thing about AirPods Pro that nobody on the internet seem to know! 🤔
 publish_date: 2022-01-15
+cover_html: "<img src=\"https://images.unsplash.com/photo-1588156979435-379b9d365296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80\">"
+# snippet: To add a short description which should be shown on the index page!
+# author: add an author
+# background: "#ff0000" # Change the background color of this specific blogpost
+# pathname: override the path of a blogpost
+og:image: https://images.unsplash.com/photo-1588156979435-379b9d365296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80
 ---
 
 **TL;DR:** AirPods Pro support replacing/overwriting the active connection by connecting from another already coupled device!
