@@ -4,6 +4,10 @@ import blog, {
   redirects,
 } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
+/**
+ * TODO: write a small webcomponent, which loads an image from unsplash and shows attribution directly on top of the image (for example as small grey text)
+ */
+
 blog({
   title: "Code Monuments",
   description: "Make the web the best platform it can be!",
