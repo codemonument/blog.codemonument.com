@@ -1,6 +1,7 @@
 ---
 title: Node Basics - The package.json for Library Authors
 publish_date: 2022-02-03
+cover_html: "<img src=\"https://images.unsplash.com/photo-1595246140625-573b715d11dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80\">"
 ---
 
 *Beginner/Entry Level Blogpost*
