@@ -1,8 +1,11 @@
-import blog, {
-  ga,
-  h,
-  redirects,
-} from "https://deno.land/x/blog@0.3.3/blog.tsx";
+/** @jsx h */
+
+/** @jsxFrag Fragment */
+/// <reference lib="dom" />
+/// <reference lib="dom.asynciterable" />
+/// <reference lib="deno.ns" />
+
+import blog, { h } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
 /**
  * TODO: write a small webcomponent, which loads an image from unsplash and shows attribution directly on top of the image (for example as small grey text)
@@ -23,7 +26,8 @@ blog({
     { title: "GitHub bjesuiter", url: "https://github.com/bjesuiter" },
     { title: "Twitter", url: "https://twitter.com/codemonument" },
   ],
-  // header:  <header>Your custom header</header>,
+  // TODO: Figure out how this header customization works!!!!
+  // header: <div> <h2> Testheader < /h2></div>,
   // middlewares: [
 
   // If you want to set up Google Analytics, paste your GA key here.
