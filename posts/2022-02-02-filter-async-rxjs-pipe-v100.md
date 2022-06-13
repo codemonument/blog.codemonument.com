@@ -1,6 +1,7 @@
 ---
 title: 🎉 filter-async-rxjs-pipe@1.00 🎉
 publish_date: 2022-02-02
+cover_html: "<img src=\"https://images.unsplash.com/photo-1514927298007-a2b56e5270e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1713&q=80\">"
 ---
 
 Today, I'm very proud to share with you the release announcement of version 1.0.0 of my package [filter-async-rxjs-pipe on npm](https://www.npmjs.com/package/filter-async-rxjs-pipe)! 🥳
