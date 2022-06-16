@@ -14,7 +14,7 @@ import blog, { h } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 blog({
   title: "Code Monuments",
   description: "Make the web the best platform it can be!",
-  cover: "./assets/banner-left.jpg",
+  cover: "./assets/banner.jpg",
   // coverStyle: "avatar-rounded",
   author: "Benjamin Jesuiter",
   background: "#f9f9f9",
