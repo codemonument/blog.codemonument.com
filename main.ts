@@ -14,12 +14,12 @@ import blog, { h } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 blog({
   title: "Code Monuments",
   description: "Make the web the best platform it can be!",
-  cover: "./assets/banner.jpg",
+  cover: "./assets/banner.jpeg",
   // coverStyle: "avatar-rounded",
   author: "Benjamin Jesuiter",
   background: "#f9f9f9",
   coverTextColor: "#f9f9f9",
-  avatar: "./assets/avatar.jpg",
+  avatar: "./assets/avatar.jpeg",
   links: [
     { title: "Email", url: "mailto:blog@codemonument.com" },
     { title: "GitHub Codemonument", url: "https://github.com/codemonument" },
