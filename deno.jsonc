@@ -2,5 +2,7 @@
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-env=NODE_DEBUG --watch main.ts --dev",
     "serve": "deno run --allow-net --allow-read --no-check main.ts",
-  }
+    "start": "deno run -A --watch=static/,routes/ dev.ts"
+  },
+  "importMap": "./import_map.json"
 }
