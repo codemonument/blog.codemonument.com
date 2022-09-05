@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "/": "./",
+    "./": "./",
+    "astro/config": "npm:astro/config"
+  }
+}
