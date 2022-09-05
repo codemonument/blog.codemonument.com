@@ -10,8 +10,6 @@ export default function PostsHome() {
       <p class={tw`my-6`}>
         Welcome to the `Posts` Homepage!
       </p>
-      <a href="series/blogpost-series-a">Blogpost Series A</a><br></br>
-      <a href="series/blogpost-series-b">Blogpost Series B</a>
       {/* <Counter start={3} /> */}
     </div>
   );
