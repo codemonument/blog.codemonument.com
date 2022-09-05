@@ -7,20 +7,33 @@ interface MdData {
 }
 
 
+/**
+ * Working Test URL: http://localhost:8000/posts/2022-01-15-airpodspro-quicktip 
+ * Not Working Test URL: http://localhost:8000/posts/bob
+ */
 export const handler: Handlers<MdData | null> = {
   async GET(_, ctx) {
     const { post } = ctx.params;
-    const content = await Deno.readTextFile(`content/posts/${post}.md`);
-    // const resp = await fetch(`https://api.github.com/users/${username}`);
-    // if (resp.status === 404) {
-    //   return ctx.render(null);
-    // }
-    const mdData: MdData = {rawContent: content}
-    return ctx.render(mdData);
+
+    try {
+      const content = await Deno.readTextFile(`content/posts/${post}.md`);
+      const mdData: MdData = {rawContent: content};
+      return ctx.render(mdData);
+
+    } catch (e: unknown) {
+      if (e instanceof Deno.errors.NotFound) return ctx.renderNotFound();
+    }
+   
+    return null;
   },
 };
 
 export default function RenderPost(props: PageProps) {
+
+  if (!props.data) {
+    return <h1> Blogpost not found!</h1>
+  }
+
   return <div>
     <h1>Post {props.params.post}</h1>
     <p>{props.data.rawContent}</p>
