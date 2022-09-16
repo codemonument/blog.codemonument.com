@@ -6,7 +6,7 @@
 /// <reference lib="deno.ns" />
 
 import blog, { h } from "https://deno.land/x/blog@0.5.0/blog.tsx";
-import { blogVersionMiddleware } from "/src/blogVersionMiddleware.ts";
+import { blogVersionMiddleware } from "./src/blogVersionMiddleware.ts";
 
 /**
  * TODO: write a small webcomponent, which loads an image from unsplash and shows attribution directly on top of the image (for example as small grey text)
