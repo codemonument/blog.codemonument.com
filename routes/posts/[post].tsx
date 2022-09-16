@@ -11,7 +11,7 @@ interface MdData {
  * Working Test URL: http://localhost:8000/posts/2022-01-15-airpodspro-quicktip 
  * Not Working Test URL: http://localhost:8000/posts/bob
  */
-export const handler: Handlers<MdData | null> = {
+export const handler: Handlers<MdData > = {
   async GET(_, ctx) {
     const { post } = ctx.params;
 
@@ -23,8 +23,8 @@ export const handler: Handlers<MdData | null> = {
     } catch (e: unknown) {
       if (e instanceof Deno.errors.NotFound) return ctx.renderNotFound();
     }
-   
-    return null;
+    
+    return ctx.renderNotFound()
   },
 };
 
