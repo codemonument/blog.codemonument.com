@@ -4,6 +4,12 @@ Based on https://deno.land/x/blog
 
 ## Repo Log 
 
+### 2022-09-16 - Try running astro build with deno 
+
+- Problem: astro.config.mjs includes imports which need to be resolved. 
+  => when importing with deno syntax, they fail, bc. this file is read by astro cli and assumed to run on node 
+  => when importing with node syntax, they fail bc. node_modules folder is missing (due to using deno-node integration)
+
 ### 2022-09-05 - Switch to Astro 
 
 1. Run `npm create astro@latest` to see what files are being created. 
