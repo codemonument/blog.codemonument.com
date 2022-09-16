@@ -35,7 +35,7 @@ It shows, for example, that you can plug some middlewares into the webserver sta
 Unfortunately, it doesn't show you, how to write such a middleware! 
 But after diggig a bit in the source-code of this package, I found the solution!
 
-## Blog Version Middleware 
+## A Super Simple Blog Version Middleware 
 
 My goal is to output the version of the "deno_blog" package somewhere on the blog, to be able to verify, 
 that the correct version of this package is running in production. 
