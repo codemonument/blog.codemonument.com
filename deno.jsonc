@@ -2,9 +2,9 @@
   "tasks": {
     "dev-old": "deno run --allow-net --allow-read --allow-env=NODE_DEBUG --watch main.ts --dev",
     "serve-old": "deno run --allow-net --allow-read --no-check main.ts",
-    "astro": "deno run --unstable --allow-env --allow-read npm:astro@^1.2.5",
+    "astro": "deno run --unstable --allow-env --allow-read --allow-write --allow-net npm:astro@^1.2.5",
     "astro-v": "deno task astro --version",
-    "build-astro-deno": "deno task astro build",
+    "astro-b": "deno task astro build",
     "build": "npm run build",
     "preview": "npm run build && deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs"
   }
