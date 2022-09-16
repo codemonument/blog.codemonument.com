@@ -5,7 +5,7 @@
 /// <reference lib="dom.asynciterable" />
 /// <reference lib="deno.ns" />
 
-import blog, { h } from "https://deno.land/x/blog@0.3.3/blog.tsx";
+import blog, { h } from "blog";
 
 /**
  * TODO: write a small webcomponent, which loads an image from unsplash and shows attribution directly on top of the image (for example as small grey text)
