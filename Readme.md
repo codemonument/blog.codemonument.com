@@ -9,6 +9,11 @@ Based on https://deno.land/x/blog
     - https://github.com/ts-stack/markdown/tree/bb47aa8e625e89e6aa84f49a98536a3089dee831
     - https://deno.land/x/markdown@v2.0.0
 
+- Pure Markdown parsers: 
+    - https://deno.land/x/rusty_markdown@v0.4.1
+    - https://deno.land/x/marker@v0.1.1
+    - https://deno.land/x/marky@v1.1.6
+
 ## Repo Log 
 
 ### 2022-09-05 Switch to Deno Fresh 

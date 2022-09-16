@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
+import { CSS, render } from "https://deno.land/x/gfm/mod.ts";
 
 interface MdData {
   rawContent: string;
@@ -34,8 +35,14 @@ export default function RenderPost(props: PageProps) {
     return <h1> Blogpost not found!</h1>
   }
 
+  const rootUrl = "https://example.com";
+
+  const body = {
+    __html: render(props.data.rawContent, {baseUrl: "http://localhost", allowIframes: false})
+  }
+
   return <div>
     <h1>Post {props.params.post}</h1>
-    <p>{props.data.rawContent}</p>
+    <div dangerouslySetInnerHTML={body}></div>
   </div>;
 }
