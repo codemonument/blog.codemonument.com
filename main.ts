@@ -6,24 +6,11 @@
 /// <reference lib="deno.ns" />
 
 import blog, { h } from "https://deno.land/x/blog@0.5.0/blog.tsx";
-import {
-  BlogContext,
-  BlogMiddleware,
-} from "https://deno.land/x/blog@0.5.0/types.d.ts";
+import { blogVersionMiddleware } from "./src/blogVersionMiddleware.ts";
 
 /**
  * TODO: write a small webcomponent, which loads an image from unsplash and shows attribution directly on top of the image (for example as small grey text)
  */
-
-const versionMiddleware: BlogMiddleware = async (
-  req: Request,
-  ctx: BlogContext,
-): Promise<Response> => {
-  const res = await ctx.next();
-
-  res.headers.append("X-DENO-BLOG-VERSION", "0.5.0");
-  return res;
-};
 
 blog({
   title: "Code Monuments",
@@ -55,5 +42,5 @@ blog({
 
   // ]
 
-  middlewares: [versionMiddleware],
+  middlewares: [blogVersionMiddleware],
 });
