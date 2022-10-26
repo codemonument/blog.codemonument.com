@@ -4,7 +4,16 @@ publish_date: 2022-10-26
 cover_html: "<img src=\"https://unsplash.com/photos/ohNxxapID_k/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8bGVtb258ZW58MHx8fHwxNjY2Nzk4Nzc3&force=true&w=1920\">"
 ---
 
-Since the new hottnes on the block is typesafe apis from backend to frontend, I wondered how this could be integrated into 
+Inspired by the [TRPC](https://trpc.io/) usage in [Create-T3-App](https://create.t3.gg/), I wondered how this awesome package could be utilized in Island Components in the Deno 'Fresh' Framework. To distinquish the framework 'Fresh' from the word 'fresh', I will write it from now on with a capital F. 
+
+If you need a quick refresher, what TRPC is doing and why it is awesome, 
+watch this Youtube Short by Ben Holmes ([@BHolmesDev on Twitter](https://twitter.com/BHolmesDev)):  
+
+https://www.youtube.com/embed/YLwtF4yxWrY
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/YLwtF4yxWrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
 
 ## TL;DR 
 
