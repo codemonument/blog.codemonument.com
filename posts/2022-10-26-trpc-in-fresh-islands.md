@@ -53,6 +53,22 @@ It also helps a lot that Deno can run Typescript directly and out of the box, wh
 
 ## The Integration 
 
+### Preparation 
+
+As preparation I added the following import mapping to my `import_map.json`: 
+
+```json
+{
+  "imports": {
+    "@/": "./"
+  }
+}
+
+```
+
+This allows me to import files from the current repo by referencing them from the root of the git repo like this: 
+`import {smth} from '@/src/someFolder/someFile.ts'`.
+
 ### The TRPC Router in `server.ts` 
 
 To connect to an API, we first have to define it! 
@@ -121,3 +137,119 @@ export function createContext({ req }: FetchCreateContextFnOptions) {
 ```
 
 **But we don't need that functionality today, so we simply pass the request down to the TRPC handlers without changes.**
+
+### The TRPC Client in `client.ts`
+
+Now that we have a server, we need a TRPC Client!
+Since Fresh does the separation of server-side code in routes and client-side code in islands completely automatic, 
+we can put this `client.ts` directly besides the `server.ts` into `src/trpc`: 
+
+```ts
+import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
+import { IS_BROWSER } from "$fresh/runtime.ts";
+
+import type { AppRouter } from "./server.ts";
+
+/**
+ * This guard check for IS_BROWSER is necessary,
+ * since `location` is not defined in global scope on server and crashes on deno deploy.
+ */
+let host;
+if (IS_BROWSER) {
+  console.log("Origin: ", location?.origin);
+  host = location?.origin;
+}
+
+export const trpc = createTRPCProxyClient<AppRouter>({
+  links: [
+    httpBatchLink({
+      url: `${host}/trpc`,
+    }),
+  ],
+});
+
+```
+
+The only thing special here is the `IS_BROWSER` check. 
+This is needed to only read `locaton?.origin` when executing this file on the client, 
+otherwise the server will crash while building the island component, where this client is used. 
+
+### The Magic: Fresh Route for TRPC!
+
+The last thing missing now is the link between the TRPC client and the TRPC router. 
+Since we don't control the server on which fresh is running, we should integrate these two through Fresh. 
+
+Fortunately, fresh provides us a way to set up a route and capture all following route parts at once,
+by using a syntax in the filename of a route similar to JS Rest params: `[...path.ts]`. 
+
+With this knowledge, we create a file at `routes/trpc/[...path].ts` and add the following code to it: 
+
+```ts
+import { HandlerContext, Handlers } from "$fresh/server.ts";
+import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
+import { appRouter } from "@/src/trpc/server.ts";
+import { createContext } from "@/src/trpc/fetch-context.ts";
+
+export const handler: Handlers = {
+  GET(_req: Request, ctx: HandlerContext) {
+    return fetchRequestHandler({
+      endpoint: "/trpc",
+      req: _req,
+      router: appRouter,
+      createContext,
+    });
+  },
+  POST(_req: Request, ctx: HandlerContext) {
+    return fetchRequestHandler({
+      endpoint: "/trpc",
+      req: _req,
+      router: appRouter,
+      createContext,
+    });
+  },
+};
+```
+
+Going quickly through this code, it shows: 
+
+- We create a [dynamic route handler in Fresh](https://fresh.deno.dev/docs/getting-started/custom-handlers) for both `GET` and `POST` HTTP Methods. 
+- In each handler, we call the fetchRequestHandler from the trpc adapters folder and pass it
+  - the endpoint configured in the TRPC router: `/trpc`
+  - the request as captured by Fresh: `_req`
+  - the trpc router which should handle this request: `appRouter` imported from `@/src/trpc/server.ts`
+  - the createContext function built earlier in `fetch-context.ts`
+
+## Testing the TRPC Integration 
+
+To test this, create a new Island component in `./islands`, called `TrpcPlayground.tsx`: 
+
+```ts
+import { useState } from "preact/hooks";
+import { trpc } from "@/src/trpc/client.ts";
+
+export default function TrpcPlayground() {
+  const [greeting, setGreeting] = useState("");
+
+  const fireQuery = () => {
+    trpc.hello.query("World")
+      .then((res) => setGreeting(res));
+  };
+
+  return (
+    <div>
+      <button onClick={fireQuery}>Fire TRPC Query</button>
+      <p>{greeting}</p>
+    </div>
+  );
+}
+
+```
+
+What we see here: 
+- We use the TRPC client imported from `@/src/client.ts` to query a route, we defined earlier on the trpc router. 
+- Nice thing: VSCode gives us autocomplete when typing `trpc.`, with all available queries and mutations! 
+
+   ![](./assets/2022-11-01_trpc-autocomplete.png)
+
+- 
+
