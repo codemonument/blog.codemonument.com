@@ -53,7 +53,7 @@ It also helps a lot that Deno can run Typescript directly and out of the box, wh
 
 ## The Integration 
 
-### The TRPC Router 
+### The TRPC Router in `server.ts` 
 
 To connect to an API, we first have to define it! 
 Therefore start by creating a `src/trpc` folder inside your Fresh repo and add a `server.ts` file to it. 
@@ -87,6 +87,8 @@ export type AppRouter = typeof appRouter;
 
 ```
 
+### What is this `Context`?
+
 We see, that the first import is initTRPC, like in the TRPC tutorials.  
 But in the second line, we need something extra. 
 This imports a `Context` type which is defined in the `./fetch-context.ts` in the `src/trpc` folder: 
@@ -117,3 +119,5 @@ export function createContext({ req }: FetchCreateContextFnOptions) {
   return { req, user };
 }
 ```
+
+**But we don't need that functionality today, so we simply pass the request down to the TRPC handlers without changes.**
