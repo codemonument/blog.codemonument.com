@@ -2,7 +2,8 @@
 title: "🛳 Arriving on Fresh Islands: Back-to-Front Type Safety with TRPC!"
 publish_date: 2022-10-26
 # cover_html: "<img src=\"https://unsplash.com/photos/ohNxxapID_k/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8bGVtb258ZW58MHx8fHwxNjY2Nzk4Nzc3&force=true&w=1920\">"
-cover_html: "<img src=\"https://unsplash.com/photos/7WAGthfGJ9w/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8bGVtb258ZW58MHx8fHwxNjY2ODA0MTgz&force=true&w=1920\">"
+# cover_html: "<img src=\"https://unsplash.com/photos/7WAGthfGJ9w/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8bGVtb258ZW58MHx8fHwxNjY2ODA0MTgz&force=true&w=1920\">"
+cover_html: "<img src=\"./assets/2022-11-03-trpc-in-fresh-islands/fresh-and-trpc-header_v3.1_1200_compressed.jpg\">"
 ---
 
 Inspired by the [TRPC](https://trpc.io/) usage in [Create-T3-App](https://create.t3.gg/), I wondered how this awesome package could be utilized in Island Components in the Deno 'Fresh' Framework. 
@@ -14,7 +15,7 @@ You can look directly at my example repo here: https://github.com/jbscratch/trpc
  
 It is also hosted at: https://trpc10-in-fresh.deno.dev/
 
-(The surface is not very exciting, it simply prints "Hello World". But under the hood it's very cool, whcih is why I'm writing this blogpost!)
+(The surface is not very exciting, it simply prints "Hello World". But under the hood it's very cool, which is why I'm writing this blogpost!)
 
 For the eager amongst you, here are the basic ingredients for integrating TRPC with Fresh Islands. 
 However, keep in mind, that these steps need some adjustments to run in deno and fresh: 
@@ -249,7 +250,11 @@ What we see here:
 - We use the TRPC client imported from `@/src/client.ts` to query a route, we defined earlier on the trpc router. 
 - Nice thing: VSCode gives us autocomplete when typing `trpc.`, with all available queries and mutations! 
 
-   ![](./assets/2022-11-01_trpc-autocomplete.png)
+   ![](./assets/2022-11-03-trpc-in-fresh-islands/2022-11-01_trpc-autocomplete.png)
 
 - 
 
+## Credits 
+
+Header Base Photo by <a href="https://unsplash.com/@mockupgraphics?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mockup Graphics</a> on <a href="https://unsplash.com/photos/7WAGthfGJ9w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
