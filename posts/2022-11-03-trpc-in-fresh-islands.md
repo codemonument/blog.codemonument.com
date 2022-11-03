@@ -6,7 +6,8 @@ publish_date: 2022-11-03
 cover_html: "<img src=\"./assets/2022-11-03-trpc-in-fresh-islands/fresh-and-trpc-header_v3.1_1200_compressed.jpg\">"
 ---
 
-Inspired by the [tRPC](https://trpc.io/) usage in [Create-T3-App](https://create.t3.gg/), I wondered how this awesome package could be utilized in Island Components in the Deno 'Fresh' Framework. 
+Inspired by the [tRPC](https://trpc.io/) usage in [Create-T3-App](https://create.t3.gg/), I wondered how this awesome package could be utilized in Island Components in the Deno 'Fresh' Framework. Come follow me along on the journey!
+
 To distinquish the framework 'Fresh' from the word 'fresh', I will write it from now on with a capital F. 
 
 ## TL;DR 
