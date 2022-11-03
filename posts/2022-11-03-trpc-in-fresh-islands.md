@@ -1,6 +1,6 @@
 ---
 title: "🛳 Arriving on Fresh Islands: tRPC!"
-publish_date: 2022-10-26
+publish_date: 2022-11-03
 # cover_html: "<img src=\"https://unsplash.com/photos/ohNxxapID_k/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8bGVtb258ZW58MHx8fHwxNjY2Nzk4Nzc3&force=true&w=1920\">"
 # cover_html: "<img src=\"https://unsplash.com/photos/7WAGthfGJ9w/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8bGVtb258ZW58MHx8fHwxNjY2ODA0MTgz&force=true&w=1920\">"
 cover_html: "<img src=\"./assets/2022-11-03-trpc-in-fresh-islands/fresh-and-trpc-header_v3.1_1200_compressed.jpg\">"
