@@ -13,7 +13,7 @@ import { blogVersionMiddleware } from "./src/blogVersionMiddleware.ts";
  */
 
 blog({
-  title: "Code Monuments",
+  title: "CodeMonument",
   description: "Make the web the best platform it can be!",
   cover: "./assets/banner.jpeg",
   // coverStyle: "avatar-rounded",
