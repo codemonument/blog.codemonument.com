@@ -41,6 +41,14 @@ blog({
   // }),
 
   // ]
-
+  // Note: Replaces header completely!
+  // header: <header></header>
+  // showHeaderOnPostPage: true,
+  // Note: footer replaces footer completely!
+  footer: <footer style={{marginTop: "50px", marginBottom: "20px", paddingBlock:"15px", borderTop: "solid 1px #D843EB", color: "#D843EB"}}>
+      <a rel="me" href="https://techhub.social/@codemonument" style={{textDecoration: "underline"}}> 
+        Comment and follow me on Mastodon! (techhub.social/@codemonument)
+      </a>
+    </footer>,
   middlewares: [blogVersionMiddleware],
 });
