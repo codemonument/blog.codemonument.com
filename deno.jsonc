@@ -2,7 +2,7 @@
   "tasks": {
     "start": "deno task dev",
     "dev": "deno run --allow-net --allow-read --allow-env=NODE_DEBUG --watch main.tsx --dev",
-    "prod": "deno run --allow-net --allow-read --no-check main.ts"
+    "prod": "deno run --allow-net --allow-read --no-check main.tsx"
   },
   "importMap": "import_map.json"
 }
