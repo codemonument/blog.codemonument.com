@@ -46,9 +46,18 @@ blog({
   // showHeaderOnPostPage: true,
   // Note: footer replaces footer completely!
   footer: <footer style={{marginTop: "50px", marginBottom: "20px", paddingBlock:"15px", borderTop: "solid 1px #D843EB", color: "#D843EB"}}>
-      <a rel="me" href="https://techhub.social/@codemonument" style={{textDecoration: "underline"}}> 
-        Comment and follow me on Mastodon! (techhub.social/@codemonument)
-      </a>
+      {/* style={{display: 'flex', flexFlow: 'column nowrap', gap: '10px'}} */}
+      <section >
+        <label for="mastodon">Comment and follow me on Mastodon! &nbsp;</label>
+        <a id="mastodon" rel="me" href="https://techhub.social/@codemonument" style={{textDecoration: "underline"}}> 
+          https://techhub.social/@codemonument
+        </a>
+        <br></br>
+        <label for="rss">Or add this blog to your rss reader! &nbsp;</label>
+        <a id="rss" href="https://blog.codemonument.com/feed" style={{ textDecoration: "underline"}}>
+          <img src="./assets/rss-icon-svgrepo.svg" style={{height: '0.9em', width: '0.9em', display: 'inline-block', marginBottom: '5px'}}></img> RSS
+        </a>
+      </section>
     </footer>,
   middlewares: [blogVersionMiddleware],
 });
