@@ -34,3 +34,27 @@ link.href = mySiblingCssUrl.href;
 
 // Append link element to HTML head
 head.appendChild(link);
+
+/**
+ * Using a Constructible Stylesheet with fetch
+ * code_constructible-stylesheet-with-fetch
+ */
+
+// construct a new url to your css file
+const myTargetCss = new URL("myTarget.css", import.meta.url);
+
+// directly fetch its content
+const cssContent = await (await fetch(myTargetCss)).text;
+
+// construct a new stylesheet
+// => aka Constructible Stylesheet! 🤯
+const sheet = new CSSStyleSheet();
+await sheet.replace(cssContent);
+
+// adopt the stylesheet objects to a document ...
+document.adoptedStyleSheets = [sheet];
+
+// ... or to a shadow root
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
+shadow.adoptedStyleSheets = [sheet];
