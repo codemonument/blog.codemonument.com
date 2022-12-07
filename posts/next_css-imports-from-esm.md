@@ -144,6 +144,11 @@ These are some useful links where you can read more about all those technologies
 ## Follow me for more! 
 
 I'll keep watching these developments and if you want to be informed of changes in this regard, 
-follow me on Twitter or Mastodon at the bottom of this page, or subscribe to my RSS Feed! 
+follow me on 
+
+- [Twitter: @codemonument](https://twitter.com/codemonument)
+- [Mastodon: techhub.social/@codemonument](https://techhub.social/@codemonument)  
+
+or subscribe to [my RSS Feed](https://blog.codemonument.com/feed)!
 
 **Thank you!**
