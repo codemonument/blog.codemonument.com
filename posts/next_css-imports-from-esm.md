@@ -13,6 +13,7 @@ ESModules can import other ESModules by simply importing them statically (via th
 
 **How can we apply this to load pure CSS files?** 
 
+&nbsp;  
 ## TL;DR 
 
 1. Step 1 - If you need something stable for today, use `import.meta.url` in the js module as a base for the css url, then load the css via a style tag inserted into the dom. 
@@ -21,6 +22,7 @@ ESModules can import other ESModules by simply importing them statically (via th
    
 3. Step 3 - If you want to be even more adventurous, use the new [CSS Module Scripts](https://web.dev/css-module-scripts/#using-css-module-scripts) Syntax, which is only available in Chrome and Edge at the time of writing.
 
+&nbsp;  
 ## Prerequisites - Getting the url of the current ESModule js file 
 
 To load a css file relative to the currently loaded ESModule, we need the url to the folder of the currently loaded file first. (duh :D )
@@ -29,8 +31,8 @@ In an ESModule we can access it via `import.meta.url`:
 
 ![](./img/code_relative-asset-urls-from-esmodule.png)
 
-
-## The Safe Route: Import via `link` Tag
+&nbsp;  
+## The Safe Route: Import via `link` Tag 🤓
 
 With the relative path to our css generated, we can simply add it into our document like this: 
 
@@ -44,7 +46,8 @@ dowloading and parsing the css file and finally rendering all sections of the do
 
 Sad 😥
 
-## The (near) Future: Constructable Stylesheets 
+&nbsp;  
+## The (near) Future: Constructable Stylesheets 🤩
 Fortunately, a solution is comming! 
 
 This is called 'Constructible Stylesheets' and is currently available in Chrome, Edge and Firefox! (No Safari yet 😢)
@@ -54,7 +57,7 @@ Here's a snippet how this could be used with `fetch`!
 
 ![](./img/code_constructible-stylesheet-with-fetch.png)
 
-**The Cool Parts**
+### The Cool Parts
 - No creation of a DOM node! 
   
 - The css string could come from anywhere not only from a server, but also from a websocket connection or similar! 
@@ -62,18 +65,30 @@ Here's a snippet how this could be used with `fetch`!
 - The same stylesheet instance can be applied to multiple documents and shadow roots, without duplicating the code inside! 
   => This can be used to have one design system stylesheet for all your webcomponents, for example!
 
-**Some Gotchas**
+### Some Gotchas
 
 - No `@import` tags allowed in Constructible Stylesheets! They will simply be ignored
 
 - The `sheet` object also as a `.replaceSync` function which blocks the main thread 
   when replacing the styles in the stylesheet object
 
-## The (somewhat distant) Future: CSS Module Scripts!
+&nbsp;  
+## The coolest Future: CSS Module Scripts! 😍
 
 Here comes the coolest thing: `CSS Module Scripts`! 
 
+**But what should that be, you ask (slightly annoyed)?**
 
+Lets take a step back and look at an option webdevs have known for a long time: 
+
+### Webpack Loaders
+
+With webpack loaders one can tell webpack how non-js filetypes should be loaded at build- or even at runtime! 
+So we had many loaders, for json, svg, css and many more. 
+
+
+
+&nbsp;  
 ## Further Reading 
 
 These are some useful links where you can read more about all those technologies! 
