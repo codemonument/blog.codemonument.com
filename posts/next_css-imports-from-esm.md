@@ -96,15 +96,27 @@ This looks great! However, since it's not standard syntax, it would not work in 
 
 This sounds way less exciting now, especially when thinking about the rest of the webpack config! 😞
 
-### CSS Module Imports to the rescue! 
+### CSS Module Script Imports to the rescue! 
 
 Browsers are working on a new Syntax for importing non-js files: The so called **Import Assertions**: 
 
+![](./img/code_css-module-import-example.png)
 
+With them, we can simply define the type of an import and get a specialized object out. 
+In this case, it's a CSSStyleSheet object, the same as in the previous example! 
+So, with this capability you could simply import your css file relative to your esmodule and instantiate it via constructable stylesheets!
 
-### Import Assertions to the Rescue! (TC39 Proposal)
+### Behind the Scenes: Import Assertions - TC39 Proposal 
 
-The exciting news is now the arrival of the 
+The exciting news is now the arrival of the **Import Assertions** Proposal at Stage 3 in the TC39 process for new JavaScript features. 
+Import Assertions do not only define such an assertion for css, like  
+
+```ts
+import sheet from './styles.css' assert { type: 'css' };
+```
+
+but may be used more formats, including JSON, Webassembly (in discussion) and potentially HTML!  
+For more in-depth info, look at this github repo: [tc39-proposal: import assertions](https://github.com/tc39/proposal-import-assertions).
 
 &nbsp;  
 ## Further Reading 
@@ -127,3 +139,11 @@ These are some useful links where you can read more about all those technologies
 - [stefanjudis.com: Import json files in ESModules](https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules/)
 
 - [tc39-proposal: import assertions](https://github.com/tc39/proposal-import-assertions)
+
+&nbsp;  
+## Follow me for more! 
+
+I'll keep watching these developments and if you want to be informed of changes in this regard, 
+follow me on Twitter or Mastodon at the bottom of this page, or subscribe to my RSS Feed! 
+
+**Thank you!**

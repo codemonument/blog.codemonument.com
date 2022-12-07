@@ -3,6 +3,7 @@
  * -------------
  */
 
+
 /**
  * code_relative-asset-urls-from-esmodule
  */
@@ -16,6 +17,8 @@ const mySiblingCssUrl = new URL("mySibling.css", myFileUrlString);
 // Explanation: The second param of the URL constructor is used as the base URL for the first parameter.
 // This can be used for navigation relative to the current ESModule!
 const myGlobalCssUrl = new URL("../../assets/global.css", myFileUrlString);
+
+
 
 /**
  * code_importing-css-via-link-tag
@@ -34,6 +37,8 @@ link.href = mySiblingCssUrl.href;
 
 // Append link element to HTML head
 head.appendChild(link);
+
+
 
 /**
  * Using a Constructible Stylesheet with fetch
@@ -58,6 +63,8 @@ document.adoptedStyleSheets = [sheet];
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 shadow.adoptedStyleSheets = [sheet];
+
+
 
 /**
  * code_loading-css-in-webpack-small
@@ -84,3 +91,16 @@ module.exports = {
     ],
   },
 };
+
+
+/**
+ * code_css-module-import-example
+ */
+
+// Woha, whats that?!? We can import css directly into an ESModule?
+import sheet from './styles.css' assert { type: 'css' };
+
+// The type of sheet is a normal constructible stylesheet, 
+// so it can be adopted to any document or shadow root!
+document.adoptedStyleSheets = [sheet];
+shadowRoot.adoptedStyleSheets = [sheet];
