@@ -6,9 +6,12 @@ publish_date: 2022-12-03
 
 ---
 
-A friend asked me some days ago how he could import a css file relative to an ESModule js file in a browser, which got me on a little journey! 
-The idea: ESModules can import other ESModules by simply importing them statically (via the `import {x} from 'package'` syntax), or by importing them dynamically (via `import(packageUrl)`). 
-How can we do this with pure CSS files? 
+A friend asked me some days ago how he could import a css file relative to an ESModule js file in a browser, which got me on a little journey!  
+
+**The Idea**  
+ESModules can import other ESModules by simply importing them statically (via the `import {x} from 'package'` syntax), or by importing them dynamically (via `import(packageUrl)`).  
+
+**How can we apply this to load pure CSS files?** 
 
 ## TL;DR 
 
@@ -22,9 +25,16 @@ To load a css file relative to the currently loaded ESModule, we need the url to
 In node, we would use `__dirname` or `__filename`. 
 In an ESModule we can access it via `import.meta.url`:
 
-![](./img/snap-relative-urls-to-assets-from-esmodule.png)
+![](./img/code_relative-asset-urls-from-esmodule.png)
+
 
 ## 1st Option: The Safe Route
+
+With the relative path to our css generated, we can simply add it into our document like this: 
+
+```
+
+```
 
 ## 2nd Option: The (hopefully near) Future:  Constructable Stylesheets 
 ## 3rd Option: The more distant, but exciting Future: CSS Module Scripts!
