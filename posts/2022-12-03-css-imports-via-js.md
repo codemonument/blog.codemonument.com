@@ -22,20 +22,7 @@ To load a css file relative to the currently loaded ESModule, we need the url to
 In node, we would use `__dirname` or `__filename`. 
 In an ESModule we can access it via `import.meta.url`:
 
-```ts
-// inside the current ESModule file 
-const myFileUrlString = import.meta.url; 
-
-// simply construct a new relative URL like this: 
-const mySiblingCssFile = new URL('mySibling.css', myFileUrlString); 
-
-// Explanation: The second param of the URL constructor is used as the base URL for the first parameter. 
-// This can be used for navigation relative to the current ESModule! 
-const myGlobalCssFile = new URL('../../assets/global.css', myFileUrlString);
-```
-
-
-
+![](./img/snap-relative-urls-to-assets-from-esmodule.png)
 
 ## 1st Option: The Safe Route
 
