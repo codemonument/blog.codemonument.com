@@ -28,11 +28,11 @@ In an ESModule we can access it via `import.meta.url`:
 ![](./img/code_relative-asset-urls-from-esmodule.png)
 
 
-## 1st Option: The Safe Route
+## The Safe Route: Import via `link` Tag
 
 With the relative path to our css generated, we can simply add it into our document like this: 
 
 ![](./img/code_importing-css-via-link-tag.png)
 
-## 2nd Option: The (hopefully near) Future:  Constructable Stylesheets 
-## 3rd Option: The more distant, but exciting Future: CSS Module Scripts!
+## The (near) Future: Constructable Stylesheets 
+## The (somewhat distant) Future: CSS Module Scripts!
