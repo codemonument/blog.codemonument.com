@@ -73,6 +73,24 @@ Here's a snippet how this could be used with `fetch`!
 
 Here comes the coolest thing: `CSS Module Scripts`! 
 
-**But what should that be now, you ask (slightly annoyed)?**
 
-Lets take a step back and look at an option
+## Further Reading 
+
+These are some useful links where you can read more about all those technologies! 
+
+- [MDN: Using import.meta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#using_import.meta)
+
+- [GeeksForGeeks: Loading css files using Javascript](https://www.geeksforgeeks.org/how-to-load-css-files-using-javascript/amp/
+)
+
+- [web.dev: Constructable Stylesheets](https://web.dev/constructable-stylesheets/#constructing-a-stylesheet)
+
+- [Caniuse: Constructable Stylesheets](https://caniuse.com/?search=Constructable%20Stylesheets)
+
+- [webpack.js.org: css-loader](https://webpack.js.org/loaders/css-loader/)
+
+- [web.dev: CSS Module Scripts](https://web.dev/css-module-scripts/#using-css-module-scripts)
+
+- [stefanjudis.com: Import json files in ESModules](https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules/)
+
+- [tc39-proposal: import assertions](https://github.com/tc39/proposal-import-assertions)
