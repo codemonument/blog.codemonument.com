@@ -54,6 +54,14 @@ Here's a snippet how this could be used with `fetch`!
 
 ![](./img/code_constructible-stylesheet-with-fetch.png)
 
+**The Cool Parts**
+- No creation of a DOM node! 
+  
+- The css string could come from anywhere not only from a server, but also from a websocket connection or similar! 
+  
+- The same stylesheet instance can be applied to multiple documents and shadow roots, without duplicating the code inside! 
+  => This can be used to have one design system stylesheet for all your webcomponents, for example!
+
 **Some Gotchas**
 
 - No `@import` tags allowed in Constructible Stylesheets! They will simply be ignored
@@ -62,3 +70,9 @@ Here's a snippet how this could be used with `fetch`!
   when replacing the styles in the stylesheet object
 
 ## The (somewhat distant) Future: CSS Module Scripts!
+
+Here comes the coolest thing: `CSS Module Scripts`! 
+
+**But what should that be now, you ask (slightly annoyed)?**
+
+Lets take a step back and look at an option
