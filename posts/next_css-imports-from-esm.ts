@@ -104,3 +104,18 @@ import sheet from './styles.css' assert { type: 'css' };
 // so it can be adopted to any document or shadow root!
 document.adoptedStyleSheets = [sheet];
 shadowRoot.adoptedStyleSheets = [sheet];
+
+
+/**
+ * header_css-module-scripts-import
+ */
+
+// Woha, whats that?!? We can import css directly into an ESModule?
+import sheet from './styles.css' assert { type: 'css' };
+
+// The type of sheet is a normal constructible stylesheet, 
+// so it can be adopted to any document or shadow root!
+document.adoptedStyleSheets = [sheet];
+shadowRoot.adoptedStyleSheets = [sheet];
+
+// To learn more, go on reading the Blogpost!

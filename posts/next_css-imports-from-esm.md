@@ -3,7 +3,7 @@ title: "How to import CSS Files from an ESModule in 2023"
 publish_date: 2022-12-03
 # cover_html: "<img src=\"https://unsplash.com/photos/ohNxxapID_k/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8bGVtb258ZW58MHx8fHwxNjY2Nzk4Nzc3&force=true&w=1920\">"
 # cover_html: "<img src=\"https://unsplash.com/photos/7WAGthfGJ9w/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8bGVtb258ZW58MHx8fHwxNjY2ODA0MTgz&force=true&w=1920\">"
-
+cover_html: "<img src=\"./img/header_css-module-scripts-import.png\">"
 ---
 
 A friend asked me some days ago how he could import a css file relative to an ESModule js file in a browser, which got me on a little journey!  
