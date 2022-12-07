@@ -58,3 +58,29 @@ document.adoptedStyleSheets = [sheet];
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 shadow.adoptedStyleSheets = [sheet];
+
+/**
+ * code_loading-css-in-webpack-small
+ */
+// in the js file
+import css from "file.css";
+
+/**
+ * CSS Loader in webpack
+ * code_css-loader-setup-in-webpack
+ */
+
+// install the webpack loader package 
+npm install --save-dev css-loader
+
+// in the webpack.config.js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};

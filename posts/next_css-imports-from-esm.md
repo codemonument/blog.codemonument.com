@@ -32,7 +32,7 @@ In an ESModule we can access it via `import.meta.url`:
 ![](./img/code_relative-asset-urls-from-esmodule.png)
 
 &nbsp;  
-## The Safe Route: Import via `link` Tag 🤓
+## The Safe Route: Import via `<link>` Tag 🤓
 
 With the relative path to our css generated, we can simply add it into our document like this: 
 
@@ -86,7 +86,25 @@ Lets take a step back and look at an option webdevs have known for a long time:
 With webpack loaders one can tell webpack how non-js filetypes should be loaded at build- or even at runtime! 
 So we had many loaders, for json, svg, css and many more. 
 
+With these loaders we could import css like this: 
 
+![](./img/code_loading-css-in-webpack-small.png)
+
+This looks great! However, since it's not standard syntax, it would not work in browsers until we do this: 
+
+![](./img/code_css-loader-setup-in-webpack.png)
+
+This sounds way less exciting now, especially when thinking about the rest of the webpack config! 😞
+
+### CSS Module Imports to the rescue! 
+
+Browsers are working on a new Syntax for importing non-js files: The so called **Import Assertions**: 
+
+
+
+### Import Assertions to the Rescue! (TC39 Proposal)
+
+The exciting news is now the arrival of the 
 
 &nbsp;  
 ## Further Reading 
