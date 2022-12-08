@@ -12,7 +12,7 @@ To distinquish the framework 'Fresh' from the word 'fresh', I will write it from
 
 ## TL;DR 
 
-You can look directly at my example repo here: https://github.com/jbscratch/trpc10-in-fresh/  
+You can look directly at my example repo here: [https://github.com/codemonument/trpc10-in-fresh-poc](https://github.com/codemonument/trpc10-in-fresh-poc)
  
 It is also hosted at: https://trpc10-in-fresh.deno.dev/
 
